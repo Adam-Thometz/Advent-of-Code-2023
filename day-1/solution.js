@@ -10,7 +10,7 @@ function trebuchetPart1(input) {
     let end = line.length - 1;
     let firstNum = null;
     let lastNum = null;
-    
+
     while (firstNum == null || lastNum == null) {
       if (firstNum == null) {
         isNumber(line[start])
@@ -54,6 +54,7 @@ function trebuchetPart2(input) {
   return total;
 }
 
+console.log(trebuchetPart1(input));
 console.log(trebuchetPart2(input));
 
 module.exports = { trebuchetPart1, trebuchetPart2 };
