@@ -3,10 +3,6 @@ const { getGameResults, getPowerOfRound } = require("./helpers");
 
 const input = fs.readFileSync('data.txt', { encoding: 'utf-8' }).split('\n');
 
-const RED_CUBE_AMOUNT = 12;
-const GREEN_CUBE_AMOUNT = 13;
-const BLUE_CUBE_AMOUNT = 14;
-
 function cubeConundrumPart1(input) {
   let sum = 0;
 
@@ -14,9 +10,9 @@ function cubeConundrumPart1(input) {
     const [gameIdInfo, roundInfo] = line.split(":");
     const gameResults = getGameResults(roundInfo.split(";"));
     if (
-      gameResults.red <= RED_CUBE_AMOUNT &&
-      gameResults.green <= GREEN_CUBE_AMOUNT &&
-      gameResults.blue <= BLUE_CUBE_AMOUNT
+      gameResults.red <= 12 &&
+      gameResults.green <= 13 &&
+      gameResults.blue <= 14
     ) {
       const gameId = Number(gameIdInfo.split(" ")[1])
       sum += gameId;
