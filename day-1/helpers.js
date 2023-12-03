@@ -1,5 +1,5 @@
 function isNumber(char) {
-  return char.charCodeAt(0) >= 48 && char.charCodeAt(0) <= 57
+  return !isNaN(Number(char))
 }
 
 function replaceWordsWithNumbers(input) {
@@ -18,4 +18,4 @@ function replaceWordsWithNumbers(input) {
     .replaceAll("nine", "9");
 }
 
-module.exports = { isNumber, replaceWordsWithNumbers }
+module.exports = { isNumber, replaceWordsWithNumbers };

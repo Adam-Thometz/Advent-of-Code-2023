@@ -9,7 +9,7 @@ describe("Trebuchet?!", () => {
       "treb7uchet"
     ];
     expect(trebuchetPart1(sample)).toBe(142);
-  })
+  });
 
   test('Part 2', () => {
     const sample = [
@@ -22,5 +22,5 @@ describe("Trebuchet?!", () => {
       "7pqrstsixteen"
     ];
     expect(trebuchetPart2(sample)).toBe(281);
-  })
-})
+  });
+});

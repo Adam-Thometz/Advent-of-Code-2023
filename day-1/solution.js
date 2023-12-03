@@ -1,5 +1,5 @@
-const fs = require('fs')
-const { isNumber, replaceWordsWithNumbers } = require('./helpers')
+const fs = require('fs');
+const { isNumber, replaceWordsWithNumbers } = require('./helpers');
 
 const input = fs.readFileSync('data.txt', { encoding: 'utf-8' }).split('\n');
 
@@ -41,10 +41,14 @@ function trebuchetPart2(input) {
 
     while (firstNum == null || lastNum == null) {
       if (firstNum == null) {
-        isNumber(updatedLine[start]) ? firstNum = updatedLine[start] : start++;
+        isNumber(updatedLine[start])
+          ? firstNum = updatedLine[start]
+          : start++;
       }
       if (lastNum == null) {
-        isNumber(updatedLine[end]) ? lastNum = updatedLine[end] : end--;
+        isNumber(updatedLine[end])
+          ? lastNum = updatedLine[end]
+          : end--;
       }
     }
 
@@ -54,7 +58,7 @@ function trebuchetPart2(input) {
   return total;
 }
 
-console.log(trebuchetPart1(input));
-console.log(trebuchetPart2(input));
+console.log("Part 1:", trebuchetPart1(input));
+console.log("Part 2:", trebuchetPart2(input));
 
 module.exports = { trebuchetPart1, trebuchetPart2 };

@@ -10,9 +10,9 @@ describe("Cube Conundrum", () => {
   ];
   test('Part 1', () => {
     expect(cubeConundrumPart1(sample)).toBe(8);
-  })
+  });
 
   test('Part 2', () => {
     expect(cubeConundrumPart2(sample)).toBe(2286);
-  })
-})
+  });
+});
